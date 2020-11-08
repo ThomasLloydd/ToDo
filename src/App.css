@@ -133,7 +133,7 @@ height: 15vh;
 }
 .inputText{
   display: block;
-  width: auto;
+  min-width: 3rem;
 }
 
 /*CUSTOM SELECTOR */
@@ -156,24 +156,29 @@ select {
   overflow: hidden;
 }
 select {
+  align-items: center;
+  text-align: center;
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
-  max-width: 14rem;
+  min-width: 9rem;
+  padding: 1.2rem;
   
   background-color: rgb(64,35,61) ;
 }
-/* Arrow */
+
 .select::after {
   content: "\25BC";
   position: absolute;
   top: 0;
   right: 0;
   padding: 1rem;
-  
+  background: rgb(64,35,61);
   cursor: pointer;
   pointer-events: none;
 }
+/* Arrow */
+
 /* Transition */
 
 @media only screen and (max-width: 1200px){
@@ -183,6 +188,39 @@ select {
   }
 }
 @media only screen and (max-width: 750px){
+  .select {
+    margin: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    
+  }
+  form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  select {
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    min-width: 14rem;
+    padding: 2rem;
+    
+    background-color: rgb(64,35,61) ;
+  }
+  
+  .select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.4rem;
+    background: rgb(64,35,61);
+    cursor: pointer;
+    pointer-events: none;
+  }
   .content-container{
     width: 90%;
   }
@@ -190,10 +228,11 @@ select {
 
 @media only screen and (max-width: 700px){
 
-  .select::after {
-    content: none;
-  }
 
+  
+select {
+  min-width: 8rem;
+}
 
   h1, h2 {
     font-size: 1.3rem;
@@ -204,7 +243,7 @@ select {
     margin: 0;
   }
   .title-container{
-    height: auto;
+    height: 10vh;
   }
   .filter-todo {
     color: white;
@@ -216,6 +255,7 @@ form button{
 }
 }
 @media only screen and (max-width: 400px){
+  
 
   .todo-item {
     font-size: 1rem;
