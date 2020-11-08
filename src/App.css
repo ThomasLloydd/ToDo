@@ -94,7 +94,8 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 height: 15vh;
-}
+
+} 
 
 .trash-btn,
 .complete-btn {
@@ -187,7 +188,7 @@ select {
     min-height: 100vh;
   }
 }
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 784px){
   .select {
     margin: 0.5rem;
     position: relative;
@@ -243,7 +244,7 @@ select {
     margin: 0;
   }
   .title-container{
-    height: 10vh;
+    height: 7rem;
   }
   .filter-todo {
     color: white;
