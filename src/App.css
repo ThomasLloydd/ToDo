@@ -110,6 +110,7 @@ height: 15vh;
 }
 .todo-item {
   padding: 0rem 0.5rem;
+  font-size: 1rem;
 }
 
 .todo-input{
@@ -175,9 +176,38 @@ select {
 }
 /* Transition */
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1200px){
+  .content-container{
+    width: 80%;
+    min-height: 100vh;
+  }
+}
+@media only screen and (max-width: 750px){
+  .content-container{
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 700px){
+
+  .select::after {
+    content: none;
+  }
+
+
+  h1, h2 {
+    font-size: 1.3rem;
+  }
+
+  .content-container{
+    width: 100%;
+    margin: 0;
+  }
+  .title-container{
+    height: auto;
+  }
   .filter-todo {
-    color: blue;
+    color: white;
     padding: 0.5rem;
   }
   form input,
@@ -186,8 +216,13 @@ form button{
 }
 }
 @media only screen and (max-width: 400px){
+
+  .todo-item {
+    font-size: 1rem;
+  }
+
   .filter-todo {
-    color: blue;
+    color: white;
     padding: 0.3rem;
     display: block;
   }
