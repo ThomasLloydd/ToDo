@@ -3,6 +3,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
+import ToDoCount from './components/ToDoCount';
 
 
 
@@ -60,10 +61,19 @@ function App() {
 
   return (
     <div className="App">
-     <h1>Tom's Todo List</h1>
+      <div className="main-container">
+      <div className="content-container">
+        <div class="title-container">
+     <h1>To do</h1>
+     <ToDoCount todos={todos} filteredTodos={filteredTodos} status={status}/>
+     <h2></h2>
+     </div>
      
      <Form setInputText={setInputText} inputText={inputText} todos={todos} setTodos={setTodos} setStatus={setStatus} />
-     <TodoList setTodos={setTodos}todos={todos}filteredTodos={filteredTodos}/>
+     <TodoList setTodos={setTodos}todos={todos}filteredTodos={filteredTodos} status={status}/>
+     
+     </div>
+     </div>
     </div>
   );
 }

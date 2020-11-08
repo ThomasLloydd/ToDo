@@ -4,24 +4,25 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(40, 40, 98);
+  background-color: rgb(89,53,87);
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
   text-align: center;
  
 }
+
+
 header {
   font-size: 2rem;
 }
-h1 {
-  padding-top: 10vh;
-}
+
 
 header,
 form {
   min-height: 20vh;
   display: flex;
+  width: auto;
   justify-content: center;
   align-items: center;
 }
@@ -30,17 +31,18 @@ form button {
   padding: 0.5rem;
   font-size: 2rem;
   border: none;
-  background: white;
+  background: rgb(64,35,61);
+  color: white;
 }
 form button {
-  color: #ff6f47;
-  background: #f7fffe;
+  color: #885685;
+  background: rgb(64,35,61);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
 }
 form button:hover {
-  background: #ff6f47;
-  color: white;
+  background: #85448b;
+  color: rgb(64,35,61);
 }
 .todo-container {
   display: flex;
@@ -49,15 +51,15 @@ form button:hover {
 }
 
 .todo-list {
-  min-width: 30%;
+  min-width: 50%;
   list-style: none;
 }
 
 .todo {
   margin: 0.5rem;
-  background: white;
+  background:  rgb(64,35,61);
   font-size: 1.5rem;
-  color: black;
+  color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,9 +72,33 @@ form button:hover {
   flex: 1;
 }
 
+.main-container{ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-container{
+  
+ 
+  background-color:  rgb(78,47,78);
+  width: 50%;
+  min-height: 80vh;
+  margin: 5vh;
+  
+}
+
+.title-container {
+background-color: rgb(113,67,111);
+align-items: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 15vh;
+}
+
 .trash-btn,
 .complete-btn {
-  background: #ff6f47;
+  background: #885685;
   color: white;
   border: none;
   padding: 1rem;
@@ -80,10 +106,14 @@ form button:hover {
   font-size: 1rem;
 }
 .complete-btn {
-  background: rgb(11, 212, 162);
+  background: rgb(184, 106, 164);
 }
 .todo-item {
   padding: 0rem 0.5rem;
+}
+
+.todo-input{
+  color: white;
 }
 
 .fa-trash,
@@ -100,9 +130,14 @@ form button:hover {
   text-decoration: line-through;
   opacity: 0.5;
 }
+.inputText{
+  display: block;
+  width: auto;
+}
 
 /*CUSTOM SELECTOR */
 select {
+  display: block;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -120,10 +155,12 @@ select {
   overflow: hidden;
 }
 select {
-  color: #ff6f47;
+  color: #ffffff;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
-  width: 12rem;
+  max-width: 14rem;
+  
+  background-color: rgb(64,35,61) ;
 }
 /* Arrow */
 .select::after {
@@ -132,13 +169,33 @@ select {
   top: 0;
   right: 0;
   padding: 1rem;
-  background: #ff6f47;
+  
   cursor: pointer;
   pointer-events: none;
 }
 /* Transition */
-/*
-.select:hover::after {
-  transform: scale(1.5);
+
+@media only screen and (max-width: 600px){
+  .filter-todo {
+    color: blue;
+    padding: 0.5rem;
+  }
+  form input,
+form button{
+  font-size: 1rem;
 }
-*/
+}
+@media only screen and (max-width: 400px){
+  .filter-todo {
+    color: blue;
+    padding: 0.3rem;
+    display: block;
+  }
+  form input,
+form button{
+  font-size: 0.8rem;
+}
+form {
+  min-height: 10vh;
+}
+}
